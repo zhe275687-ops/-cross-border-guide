@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>个人跨境卖家全流程指南 | 从0到1出海赚钱</title>
+<style>
+  :root {
+    --bg: #0f172a;
+    --card: #1e293b;
+    --border: #334155;
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+    --blue: #38bdf8;
+    --green: #4ade80;
+    --orange: #fb923c;
+    --purple: #c084fc;
+    --red: #f87171;
+    --yellow: #facc15;
+    --pink: #f472b6;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: 'Segoe UI','Microsoft YaHei','PingFang SC',sans-serif;
+    background: var(--bg); color: var(--text); line-height:1.7;
+  }
+
+  /* hero */
+  .hero {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0f172a 100%);
+    text-align:center; padding:56px 20px 40px; border-bottom:2px solid var(--border);
+  }
+  .hero h1 { font-size:36px; letter-spacing:2px; margin-bottom:10px; }
+  .hero h1 span { color:var(--blue); }
+  .hero .sub { color:var(--muted); font-size:15px; max-width:600px; margin:0 auto; }
+  .hero .badge-row { margin-top:20px; display:flex; justify-content:center; gap:12px; flex-wrap:wrap; }
+  .hero .badge { padding:5px 16px; border-radius:20px; font-size:13px; border:1px solid var(--border); color:var(--muted); }
+
+  /* nav */
+  .nav {
+    position:sticky; top:0; z-index:100;
+    background:#0f172aee; backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--border);
+    display:flex; gap:4px; padding:0 16px; overflow-x:auto; flex-wrap:nowrap;
+  }
+  .nav a {
+    color:var(--muted); text-decoration:none; font-size:13px;
+    padding:10px 14px; white-space:nowrap; border-bottom:2px solid transparent;
+    transition:.2s;
+  }
+  .nav a:hover, .nav a:focus { color:var(--text); border-color:var(--blue); }
+
+  /* sections */
+  .container { max-width:1100px; margin:0 auto; padding:0 20px; }
+  section { padding:40px 0; border-bottom:1px solid var(--border); }
+  h2 { font-size:24px; margin-bottom:8px; }
+  h2 .icon { margin-right:8px; }
+  h3 { font-size:17px; margin:20px 0 10px; color:var(--blue); }
+  .desc { color:var(--muted); font-size:14px; margin-bottom:18px; }
+
+  /* cards */
+  .card-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:14px; margin-bottom:18px; }
+  .card {
+    background:var(--card); border:1px solid var(--border); border-radius:10px;
+    padding:18px; transition:.2s;
+  }
+  .card:hover { border-color:var(--blue); }
+  .card .head { display:flex; align-items:center; gap:10px; margin-bottom:10px; }
+  .card .head .emoji { font-size:22px; }
+  .card .head .title { font-weight:700; font-size:15px; }
+  .card ul { list-style:none; font-size:13px; color:var(--muted); }
+  .card ul li { padding:4px 0; }
+  .card ul li::before { content:'› '; color:var(--blue); }
+  .card .price { display:inline-block; margin-top:8px; font-size:11px; padding:2px 10px; border-radius:10px; background:#334155; color:var(--green); }
+  .card .price.free { color:var(--green); background:#14532d; }
+
+  /* tool table */
+  .tool-table { width:100%; border-collapse:collapse; font-size:13px; margin-bottom:18px; }
+  .tool-table th { text-align:left; padding:12px 10px; border-bottom:2px solid var(--border); color:var(--blue); font-size:12px; text-transform:uppercase; letter-spacing:1px; }
+  .tool-table td { padding:10px; border-bottom:1px solid var(--border); }
+  .tool-table tr:hover td { background:#1e293b; }
+  .tag { display:inline-block; padding:2px 8px; border-radius:4px; font-size:11px; }
+  .tag.must { background:#7f1d1d; color:var(--red); }
+  .tag.opt { background:#1e3a5f; color:var(--blue); }
+  .tag.free { background:#14532d; color:var(--green); }
+
+  /* flow */
+  .flow { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; align-items:center; margin:20px 0; }
+  .flow .step {
+    background:var(--card); border:1px solid var(--border); border-radius:10px;
+    padding:14px 18px; text-align:center; min-width:100px; font-size:13px;
+  }
+  .flow .step .num { font-size:22px; font-weight:bold; color:var(--blue); }
+  .flow .arrow { color:var(--muted); font-size:20px; }
+
+  /* tips */
+  .tip {
+    background:#1e3a5f33; border-left:3px solid var(--blue); border-radius:0 8px 8px 0;
+    padding:12px 16px; margin:12px 0; font-size:13px; color:var(--blue);
+  }
+  .warn {
+    background:#7f1d1d33; border-left:3px solid var(--red); border-radius:0 8px 8px 0;
+    padding:12px 16px; margin:12px 0; font-size:13px; color:var(--red);
+  }
+
+  .footer { text-align:center; padding:24px; color:var(--muted); font-size:12px; }
+
+  @media(max-width:640px) {
+    .hero h1 { font-size:24px; }
+    .card-grid { grid-template-columns:1fr; }
+    .flow { flex-direction:column; }
+    .flow .arrow { transform:rotate(90deg); }
+  }
+</style>
+</head>
+<body>
+
+<!-- ========== HERO ========== -->
+<div class="hero">
+  <h1>🚀 个人跨境卖家 <span>全流程指南</span></h1>
+  <p class="sub">从网络环境到选品上架，从出单发货到收款记账——一个人也能跑通跨境电商</p>
+  <div class="badge-row">
+    <span class="badge">亚马逊</span><span class="badge">Ozon</span><span class="badge">美客多</span>
+    <span class="badge">Shopee</span><span class="badge">TikTok Shop</span><span class="badge">Temu</span>
+  </div>
+</div>
+
+<!-- ========== NAV ========== -->
+<nav class="nav">
+  <a href="#s0">🛒 平台选择</a>
+  <a href="#s1">🌐 网络环境</a>
+  <a href="#s2">💻 硬件设备</a>
+  <a href="#s3">💰 收款支付</a>
+  <a href="#s4">🔍 选品</a>
+  <a href="#s5">🏭 货源采购</a>
+  <a href="#s6">📝 上架</a>
+  <a href="#s7">📦 出单发货</a>
+  <a href="#s8">🚚 物流</a>
+  <a href="#s9">💬 售后</a>
+  <a href="#s10">🧮 记账</a>
+  <a href="#s11">⚡ 总览</a>
+</nav>
+
+<div class="container">
+
+<!-- ================================================================ -->
+<!-- 0. 平台选择 -->
+<!-- ================================================================ -->
+<section id="s0">
+<h2><span class="icon">🛒</span>第一步：选平台</h2>
+<p class="desc">不同平台对应不同市场、不同门槛，个人卖家建议先做一个，跑通再拓。</p>
+
+<div class="card-grid">
+  <div class="card">
+    <div class="head"><span class="emoji">🇺🇸</span><span class="title">亚马逊 Amazon</span></div>
+    <ul>
+      <li>全球最大，流量最高</li>
+      <li>门槛：营业执照 + 商标（部分类目）</li>
+      <li>模式：FBA（入仓）或 FBM（自发货）</li>
+      <li>个人适合：FBM 自发货起步，成本低</li>
+      <li>开店费：$39.99/月（专业卖家）</li>
+    </ul>
+    <span class="tag must">需要公司执照</span>
+  </div>
+  <div class="card">
+    <div class="head"><span class="emoji">🇷🇺</span><span class="title">Ozon</span></div>
+    <ul>
+      <li>俄罗斯最大电商，增速快</li>
+      <li>门槛较低，个人可开店</li>
+      <li>中国卖家直接发货或入仓</li>
+      <li>适合：测试新市场，竞争比亚马逊小</li>
+    </ul>
+    <span class="tag free">个人可注册</span>
+  </div>
+  <div class="card">
+    <div class="head"><span class="emoji">🌏</span><span class="title">Shopee / Lazada</span></div>
+    <ul>
+      <li>东南亚 + 台湾市场</li>
+      <li>客单价低但单量大</li>
+      <li>Shopee 跨境店门槛不高</li>
+      <li>适合：低价走量产品</li>
+    </ul>
+  </div>
+  <div class="card">
+    <div class="head"><span class="emoji">🎵</span><span class="title">TikTok Shop</span></div>
+    <ul>
+      <li>短视频+直播带货，流量红利</li>
+      <li>美区/东南亚/英国</li>
+      <li>内容能力要求高</li>
+      <li>适合：有内容创作能力的卖家</li>
+    </ul>
+    <span class="tag opt">需要内容运营</span>
+  </div>
+  <div class="card">
+    <div class="head"><span class="emoji">🇧🇷</span><span class="title">美客多 Mercado Libre</span></div>
+    <ul>
+      <li>拉美最大电商</li>
+      <li>墨西哥、巴西最热</li>
+      <li>FBM自发货为主</li>
+      <li>适合：拓展新兴市场</li>
+    </ul>
+  </div>
+  <div class="card">
+    <div class="head"><span class="emoji">🛍️</span><span class="title">Temu（半托管）</span></div>
+    <ul>
+      <li>拼多多海外版，增长极猛</li>
+      <li>全托管:平台包揽物流售后</li>
+      <li>半托管:卖家自己发货</li>
+      <li>利润薄但量大，适合工厂型卖家</li>
+    </ul>
+    <span class="tag opt">利润薄需走量</span>
+  </div>
+</div>
+<div class="tip">💡 个人新手最推荐的路径：先做亚马逊FBM（练手）→ 同时开Ozon（拓市场）→ 有心力再做TikTok Shop</div>
+</section>
+
+<!-- ================================================================ -->
+<!-- 1. 网络环境 -->
+<!-- ================================================================ -->
+<section id="s1">
+<h2><span class="icon">🌐</span>网络环境 — 跨境生意的"地基"</h2>
+<p class="desc">跨境=翻墙。网络不稳，账号被封，前面白干。</p>
+
+<h3>1.1 科学上网（翻墙）</h3>
+<div class="card-grid">
+  <div class="card">
+    <div class="head"><span class="emoji">⚡</span><span class="title">机场/SSR 节点</span></div>
+    <ul>
+      <li>按月付费，几块到几十块/月</li>
+      <li>节点遍布全球，切换方便</li>
+      <li>推荐：自己搜"稳定机场"，看评价</li>
+      <li>常见协议：SS / V2Ray / Trojan / Hysteria2</li>
+    </ul>
+    <span class="price free">¥10-50/月</span>
+  </div>
+  <div class="card">
+    <div class="head"><span class="emoji">🖥️</span><span class="title">自建 VPS 节点</span></div>
+    <ul>
+      <li>买海外 VPS 自己搭</li>
+      <li>独享IP，更稳定、更安全</li>
+      <li>需要一点技术基础</li>
+      <li>VPS：搬瓦工 / Vultr / DigitalOcean</li>
+    </ul>
+    <span class="price">$5-20/月</span>
+  </div>
+</div>
+
+<h3>1.2 防关联 — 多店铺必修</h3>
+<div class="warn">⚠️ 平台会检测浏览器指纹、IP、Cookies，同一台电脑登多个同平台账号会被关联封号！</div>
+<div class="card-grid">
+  <div class="card">
+    <div class="head"><span class="emoji">🧩</span><span class="title">指纹浏览器</span></div>
+    <ul>
+      <li>每个店铺一个独立浏览器环境</li>
+      <li>不同指纹（UA/时区/语言/分辨率）</li>
+      <li>推荐：AdsPower / Multilogin / 候鸟</li>
+      <li>免费版支持少量环境</li>
+    </ul>
+    <span class="price free">免费起 / 高级版 ¥99+/月</span>
+  </div>
+  <div class="card">
+    <div class="head"><span class="emoji">☁️</span><span class="title">远程 VPS（云桌面）</span></div>
+    <ul>
+      <li>一台海外 VPS 就是一个独立电脑</li>
+      <li>纯国外IP，防关联效果最好</li>
+      <li>淘宝搜"跨境VPS"或自购</li>
+      <li>智赢ERP内置VPS绑定</li>
+    </ul>
+    <span class="price">¥50-200/月</span>
+  </div>
+  <div class="card">
+    <div class="head"><span class="emoji">📱</span><span class="title">手机 + 流量卡</span></div>
+    <ul>
+      <li>最原始也最稳的方法</li>
+      <li>一机一卡一号，永不关联</li>
+      <li>买二手手机 + 独立流量卡</li>
+    </ul>
+    <span class="price">手机 ¥300-800 + 流量卡 ¥19/月</span>
+  </div>
+</div>
+
+<h3>1.3 浏览器 & 必备插件</h3>
+<table class="tool-table">
+  <tr><th>工具</th><th>用途</th><th>价格</th></tr>
+  <tr><td>Chrome / Edge</td><td>主力浏览器</td><td>免费</td></tr>
+  <tr><td>AdsPower</td><td>指纹浏览器，多店铺环境隔离</td><td>免费2环境</td></tr>
+  <tr><td>Keepa 插件</td><td>亚马逊历史价格/排名/B SR</td><td>免费基础版</td></tr>
+  <tr><td>Grammarly</td><td>英文写作纠错</td><td>免费</td></tr>
+  <tr><td>Instant Data Scraper</td><td>网页数据抓取</td><td>免费</td></tr>
+</table>
+</section>
+
+<!-- ================================================================ -->
+<!-- 2. 硬件设备 -->
+<!-- ================================================================ -->
+<section id="s2">
+<h2><span class="icon">💻</span>硬件设备 — 一个人就是一家公司</h2>
+
+<h3>2.1 电脑</h3>
+<table class="tool-table">
+  <tr><th>配置</th><th>建议</th><th>预算</th></tr>
+  <tr><td>CPU</td><td>i5 / R5 以上，核多开虚拟机好</td><td>—</td></tr>
+  <tr><td>内存</td><td>16GB 起步（开指纹浏览器 + ERP 吃内存）</td><td>—</td></tr>
+  <tr><td>硬盘</td><td>SSD 512G+，存产品图</td><td>—</td></tr>
+  <tr><td>屏幕</td><td>建议双屏！一个上架一个查数据，效率翻倍</td><td>二手屏 ¥300</td></tr>
+  <tr><td>笔记本</td><td>够用就行，轻薄本即可</td><td>¥3000-5000</td></tr>
+</table>
+
+<h3>2.2 手机</h3>
+<table class="tool-table">
+  <tr><th>用途</th><th>说明</th></tr>
+  <tr><td>主力机</td><td>日常沟通，微信/WhatsApp 对接客户和货代</td></tr>
+  <tr><td>注册手机</td><td>平台注册要手机号，建议独立号，不用自己主号</td></tr>
+  <tr><td>店铺手机</td><td>如果做手机端店铺操作，一机一号不混用</td></tr>
+  <tr><td>备用机</td><td>收验证码、装平台APP看竞品</td></tr>
+</table>
+
+<h3>2.3 其他硬件</h3>
+<div class="card-grid">
+  <div class="card">
+    <div class="head"><span class="emoji">🖨️</span><span class="title">标签打印机</span></div>
+    <ul><li>打快递面单、FBA外箱标</li><li>热敏打印机（不用墨）</li><li>推荐：汉印 / 快麦</li></ul>
+    <span class="price">¥200-500</span>
+  </div>
+  <div class="card">
+    <div class="head"><span class="emoji">📦</span><span class="title">打包工具</span></div>
+    <ul><li>电子秤（计重）</li><li>封箱胶带、气泡膜</li><li>快递袋、纸箱（淘宝批发）</li></ul>
+    <span class="price">¥100-300</span>
+  </div>
+</div>
+</section>
+
+<!-- ================================================================ -->
+<!-- 3. 收款支付 -->
+<!-- ================================================================ -->
+<section id="s3">
+<h2><span class="icon">💰</span>收款 & 支付 — 钱怎么回来</h2>
+<p class="desc">平台卖了货是外币，你得有个渠道把钱合规转回国内银行卡。</p>
+
+<h3>3.1 跨境收款平台</h3>
+<table class="tool-table">
+  <tr><th>平台</th><th>特点</th><th>费率</th><th>适合</th></tr>
+  <tr><td>Payoneer（派安盈）</td><td>老牌，支持平台最多，提现到国内银行卡</td><td>1%-2%</td><td>亚马逊首选</td></tr>
+  <tr><td>PingPong</td><td>中国公司，费率低，到账快</td><td>1%封顶</td><td>中小卖家</td></tr>
+  <tr><td>连连支付</td><td>国内背景，操作简单</td><td>0.7%起</td><td>新手友好</td></tr>
+  <tr><td>万里汇 WorldFirst</td><td>蚂蚁集团旗下，安全</td><td>0.3%起</td><td>大额收款</td></tr>
+  <tr><td>空中云汇 Airwallex</td><td>多币种账户，企业级</td><td>按量</td><td>多平台多币种</td></tr>
+</table>
+
+<h3>3.2 付款（采购 + 物流）</h3>
+<table class="tool-table">
+  <tr><th>场景</th><th>用什么</th></tr>
+  <tr><td>1688 进货</td><td>支付宝 / 微信</td></tr>
+  <tr><td>付物流/货代</td><td>微信 / 支付宝 / 银行转账</td></tr>
+  <tr><td>付海外仓</td><td>Payoneer余额 / 电汇</td></tr>
+  <tr><td>平台月租/佣金</td><td>平台从销售额里直接扣；不够从收款账户扣</td></tr>
+</table>
+
+<h3>3.3 需要的卡和账号清单</h3>
+<div class="tip">✅ Visa/Mastercard 双币信用卡（付平台月租、广告费）<br>
+✅ 国内银行卡（提现收款）<br>
+✅ Payoneer 或连连账号（收款中转）<br>
+✅ 支付宝 / 微信（国内采购付款）</div>
+</section>
+
+<!-- ================================================================ -->
+<!-- 4. 选品 -->
+<!-- ================================================================ -->
+<section id="s4">
+<h2><span class="icon">🔍</span>选品 — 七分靠选品，三分靠运营</h2>
+<p class="desc">选品选对了，后面躺着出单。选错了，广告烧光也没用。</p>
+
+<h3>4.1 选品数据工具</h3>
+<table class="tool-table">
+  <tr><th>工具</th><th>核心功能</th><th>价格</th></tr>
+  <tr><td>卖家精灵</td><td>关键词挖掘、竞品销量估算、市场分析、评论分析</td><td>¥368/月</td></tr>
+  <tr><td>Helium 10</td><td>亚马逊选品第一梯队，Cerebro关键词反查、Black Box选品</td><td>$29/月起</td></tr>
+  <tr><td>Jungle Scout</td><td>老牌选品，销量预估准，界面友好</td><td>$49/月起</td></tr>
+  <tr><td>Keepa</td><td>查历史价格、排名、BuyBox变动（必装插件）</td><td>免费基础 / €19全功能</td></tr>
+  <tr><td>Google Trends</td><td>看产品搜索趋势，判断季节性和增长</td><td>免费</td></tr>
+</table>
+
+<h3>4.2 选品方法和标准</h3>
+<div class="card-grid">
+  <div class="card">
+    <div class="head"><span class="emoji">📐</span><span class="title">新手选品标准</span></div>
+    <ul>
+      <li>售价 $15-50（太低没利润，太高没胆量）</li>
+      <li>重量 < 1kg（运费低）</li>
+      <li>无电子/液体/粉末（物流限制少）</li>
+      <li>月搜索量 > 5000</li>
+      <li>头部竞品评论 < 500（还有机会）</li>
+      <li>毛利率 > 30%</li>
+    </ul>
+  </div>
+  <div class="card">
+    <div class="head"><span class="emoji">🎯</span><span class="title">选品思路</span></div>
+    <ul>
+      <li><b>利基市场</b>：大卖看不上的小众品类</li>
+      <li><b>改良款</b>：看差评，改掉竞品的缺点</li>
+      <li><b>视觉款</b>：换个颜色/图案/包装就变新品</li>
+      <li><b>套装组合</b>：把几样东西打包卖</li>
+      <li><b>节日/季节款</b>：圣诞、万圣、Prime Day</li>
+      <li><b>跟卖自有品牌</b>：看工厂有什么就卖什么</li>
+    </ul>
+  </div>
+</div>
+<div class="warn">🚫 新手避坑：不碰侵权（大牌Logo）、不碰认证品（FDA/CE/CPC费钱费时）、不做易碎品（售后噩梦）</div>
+</section>
+
+<!-- ================================================================ -->
+<!-- 5. 货源采购 -->
+<!-- ================================================================ -->
+<section id="s5">
+<h2><span class="icon">🏭</span>货源 & 采购 — 货从哪里来</h2>
+
+<table class="tool-table">
+  <tr><th>渠道</th><th>说明</th><th>适合</th></tr>
+  <tr><td>1688.com</td><td>阿里旗下，品类最全，大部分跨境卖家的第一站</td><td>所有品类</td></tr>
+  <tr><td>拼多多</td><td>部分品类比拼多多更便宜（百货小件）</td><td>小商品</td></tr>
+  <tr><td>义乌购</td><td>义乌小商品市场线上版，百货天堂</td><td>日用品、饰品</td></tr>
+  <tr><td>淘宝</td><td>找特殊品类、原创设计</td><td>个性化产品</td></tr>
+  <tr><td>闲鱼</td><td>清仓尾货、二手设备</td><td>捡漏</td></tr>
+  <tr><td>线下跑厂</td><td>义乌/广州/深圳华强北实地逛</td><td>长期大单品</td></tr>
+</table>
+
+<h3>采购技巧</h3>
+<div class="tip">
+💡 1. 先买样品（3-5家比质量）→ 2. 小批量试卖 → 3. 出单稳定再谈批量价<br>
+💡 用智赢ERP / 店小秘的"下单器"直接从1688一键采购，自动填地址<br>
+💡 和2-3家供应商保持关系，防止断货
+</div>
+</section>
+
+<!-- ================================================================ -->
+<!-- 6. 上架 -->
+<!-- ================================================================ -->
+<section id="s6">
+<h2><span class="icon">📝</span>上架 Listing — 把产品挂到平台</h2>
+
+<h3>6.1 上架前准备</h3>
+<table class="tool-table">
+  <tr><th>物料</th><th>工具</th><th>说明</th></tr>
+  <tr><td>标题</td><td>ChatGPT / DeepL / 卖家精灵关键词</td><td>埋核心关键词，控制在200字符内</td></tr>
+  <tr><td>五点</td><td>ChatGPT 生成 + 自己改</td><td>说好处，不堆参数</td></tr>
+  <tr><td>产品描述</td><td>ChatGPT / Jasper AI</td><td>A+内容用Canva做图+文字排版</td></tr>
+  <tr><td>主图</td><td>Canva / Photoshop / 白底图工具</td><td>纯白背景，产品占85%以上</td></tr>
+  <tr><td>附图</td><td>Canva / Figma / 淘宝找人</td><td>场景图+尺寸图+对比图+卖点图</td></tr>
+  <tr><td>视频</td><td>手机拍 + 剪映剪辑</td><td>15-30秒展示使用场景</td></tr>
+  <tr><td>A+ / EBC</td><td>Canva 设计 + 平台模板</td><td>品牌故事、对比图，提高转化</td></tr>
+  <tr><td>关键词</td><td>卖家精灵 / Helium 10 / 平台搜索下拉</td><td>标题+Search Term各埋一遍</td></tr>
+  <tr><td>UPC/EAN</td><td>GS1官方 / 淘宝买</td><td>每个变体需要一个码</td></tr>
+</table>
+
+<h3>6.2 翻译 & 文案</h3>
+<div class="card-grid">
+  <div class="card">
+    <div class="head"><span class="emoji">🤖</span><span class="title">ChatGPT</span></div>
+    <ul><li>写标题、五点、描述、A+内容</li><li>改写竞品文案避免重复</li><li>生成客服邮件模板</li></ul>
+    <span class="price free">免费版够用 / Plus $20</span>
+  </div>
+  <div class="card">
+    <div class="head"><span class="emoji">🌍</span><span class="title">DeepL</span></div>
+    <ul><li>翻译质量比Google好很多</li><li>支持文档整篇翻译</li><li>适合英语一般的卖家</li></ul>
+    <span class="price free">免费版 / Pro €8.99/月</span>
+  </div>
+</div>
+
+<h3>6.3 作图</h3>
+<div class="card-grid">
+  <div class="card">
+    <div class="head"><span class="emoji">🎨</span><span class="title">Canva</span></div>
+    <ul><li>拖拽式设计，模板多</li><li>自带去背景、调色</li><li>亚马逊A+、社媒图都有模板</li></ul>
+    <span class="price free">免费够用 / Pro $13/月</span>
+  </div>
+  <div class="card">
+    <div class="head"><span class="emoji">🖼️</span><span class="title">Remove.bg</span></div>
+    <ul><li>一键去背景，白底主图必备</li></ul>
+    <span class="price free">免费</span>
+  </div>
+  <div class="card">
+    <div class="head"><span class="emoji">📸</span><span class="title">淘宝找人做</span></div>
+    <ul><li>搜"亚马逊美工"</li><li>一套图 ¥200-800</li></ul>
+    <span class="price">¥200-800/套</span>
+  </div>
+</div>
+
+<h3>6.4 ERP 上架（你家的产品在这里切入）</h3>
+<div class="tip">
+💡 用<strong>智赢ERP</strong>批量刊登：做好一个产品模板 → 一键同步到亚马逊、Ozon、美客多等多平台 → 不用每个平台重新做一遍。批量翻译、侵仅词检查、分类映射都可以在ERP里完成。
+</div>
+</section>
+
+<!-- ================================================================ -->
+<!-- 7. 出单 & 订单处理 -->
+<!-- ================================================================ -->
+<section id="s7">
+<h2><span class="icon">📦</span>出单 & 订单处理 — 从订单到发货</h2>
+
+<h3>自发货（FBM）完整流程</h3>
+<div class="flow">
+  <div class="step"><div class="num">1</div>平台出单</div>
+  <div class="arrow">→</div>
+  <div class="step"><div class="num">2</div>ERP自动拉单</div>
+  <div class="arrow">→</div>
+  <div class="step"><div class="num">3</div>ERP去1688采购</div>
+  <div class="arrow">→</div>
+  <div class="step"><div class="num">4</div>货到仓库/货代</div>
+  <div class="arrow">→</div>
+  <div class="step"><div class="num">5</div>贴标/验货/打包</div>
+  <div class="arrow">→</div>
+  <div class="step"><div class="num">6</div>交给物流发出</div>
+  <div class="arrow">→</div>
+  <div class="step"><div class="num">7</div>ERP回传单号</div>
+</div>
+
+<h3>用到的工具</h3>
+<table class="tool-table">
+  <tr><th>环节</th><th>工具</th><th>干什么</th></tr>
+  <tr><td>拉订单</td><td>智赢ERP / 店小秘</td><td>自动从平台拉新订单，不用手动刷新</td></tr>
+  <tr><td>采购</td><td>智赢下单器 / 1688一键采购</td><td>填地址下单，跟踪1688物流</td></tr>
+  <tr><td>打单</td><td>ERP内打印 / 店小秘打印</td><td>生成快递面单、拣货单</td></tr>
+  <tr><td>跟踪</td><td>ERP / 17TRACK / 快递100</td><td>跟踪国内外物流，发现异常及时处理</td></tr>
+</table>
+</section>
+
+<!-- ================================================================ -->
+<!-- 8. 物流 -->
+<!-- ================================================================ -->
+<section id="s8">
+<h2><span class="icon">🚚</span>物流 — 货怎么出国</h2>
+
+<h3>自发货主要物流方式</h3>
+<table class="tool-table">
+  <tr><th>方式</th><th>时效</th><th>费用</th><th>适合</th></tr>
+  <tr><td>国际快递（DHL/UPS/FedEx）</td><td>3-7天</td><td>高</td><td>高价值/急单</td></tr>
+  <tr><td>专线物流（云途/燕文/递四方）</td><td>7-15天</td><td>中</td><td>最常用！性价比高</td></tr>
+  <tr><td>邮政小包（EUB/中国邮政）</td><td>15-30天</td><td>低</td><td>低客单价轻小件</td></tr>
+  <tr><td>海外仓（FBA / 第三方仓）</td><td>1-3天（本地发货）</td><td>头程+仓储费</td><td>稳定出单的爆品</td></tr>
+</table>
+
+<h3>找货代</h3>
+<div class="tip">
+💡 加5-10个货代的微信比价 → 先发小包测试时效和服务 → 选2-3家长期合作<br>
+💡 货代一般在深圳/广州/义乌，离货源近<br>
+💡 问清楚：计费方式（体积重还是实重）、时效承诺、丢件赔付、能不能走带电/液体
+</div>
+</section>
+
+<!-- ================================================================ -->
+<!-- 9. 售后 -->
+<!-- ================================================================ -->
+<section id="s9">
+<h2><span class="icon">💬</span>售后 & 客户服务</h2>
+
+<h3>常见售后场景 & 处理</h3>
+<table class="tool-table">
+  <tr><th>场景</th><th>怎么做</th></tr>
+  <tr><td>买家问物流</td><td>发跟踪号，解释"国际物流需7-15天"，ChatGPT写模板</td></tr>
+  <tr><td>收到货坏了/错了</td><td>先道歉 → 直接退款或重发 → 差评比这点货值贵多了</td></tr>
+  <tr><td>差评</td><td>联系买家真诚道歉+补偿方案 → 不要直接要求改评（违规）</td></tr>
+  <tr><td>退货</td><td>货值低直接退钱不要货；货值高走海外仓退货</td></tr>
+  <tr><td>A-to-Z 索赔</td><td>第一时间回复，提供物流凭证，证明你发了货</td></tr>
+</table>
+
+<h3>工具</h3>
+<table class="tool-table">
+  <tr><th>工具</th><th>说明</th></tr>
+  <tr><td>ChatGPT</td><td>生成各种场景的英文邮件模板，语气专业</td></tr>
+  <tr><td>ERP客服邮箱</td><td>多店铺邮件聚合，统一回复，不遗漏</td></tr>
+  <tr><td>Google Translate</td><td>快速理解买家说了啥</td></tr>
+</table>
+</section>
+
+<!-- ================================================================ -->
+<!-- 10. 记账 -->
+<!-- ================================================================ -->
+<section id="s10">
+<h2><span class="icon">🧮</span>记账 & 利润核算</h2>
+
+<h3>每单利润公式</h3>
+<div class="tip" style="font-size:15px;text-align:center;">
+  <b>净利润 = 售价 - 平台佣金 - 进货成本 - 国内运费 - 国际运费 - 广告费 - 退货损耗 - 收款手续费</b>
+</div>
+
+<h3>工具</h3>
+<table class="tool-table">
+  <tr><th>阶段</th><th>工具</th></tr>
+  <tr><td>起步（< 50单/月）</td><td>Google Sheets / Excel 模板，自己记每单成本</td></tr>
+  <tr><td>成长（50-300单/月）</td><td>ERP 财务管理模块，自动算利润</td></tr>
+  <tr><td>做大（> 300单/月）</td><td>专业跨境财务工具：领星 / 积加 / 专业会计</td></tr>
+</table>
+
+<div class="warn">💸 最常见的错误：忘了算退货损耗、广告费、汇率波动！很多卖家看着出单多，一算账发现亏的。</div>
+</section>
+
+<!-- ================================================================ -->
+<!-- 11. 全流程总览 -->
+<!-- ================================================================ -->
+<section id="s11" style="border-bottom:none;">
+<h2><span class="icon">⚡</span>全流程总览 + 工具清单</h2>
+
+<h3>一个人跨境卖家的每日工作流</h3>
+<div class="flow">
+  <div class="step"><div class="num">☀️</div>看ERP订单<br>处理新单</div>
+  <div class="arrow">→</div>
+  <div class="step"><div class="num">📦</div>采购 + 发货<br>填单号</div>
+  <div class="arrow">→</div>
+  <div class="step"><div class="num">💬</div>回买家消息<br>查物流异常</div>
+  <div class="arrow">→</div>
+  <div class="step"><div class="num">🔍</div>看竞品/选品<br>研究新品</div>
+  <div class="arrow">→</div>
+  <div class="step"><div class="num">📝</div>优化Listing<br>上新品</div>
+  <div class="arrow">→</div>
+  <div class="step"><div class="num">🧮</div>记账<br>算利润</div>
+</div>
+
+<h3>完整工具清单（可复制）</h3>
+<table class="tool-table">
+  <tr><th>类别</th><th>工具</th><th>用途</th><th>月费</th></tr>
+  <tr><td>🌐 网络</td><td>机场/自建节点</td><td>科学上网</td><td>¥10-50</td></tr>
+  <tr><td>🔐 防关联</td><td>AdsPower + 独立IP</td><td>多店铺环境隔离</td><td>免费-¥99</td></tr>
+  <tr><td>🔍 选品</td><td>卖家精灵 / Helium 10</td><td>看数据选品</td><td>¥0-368</td></tr>
+  <tr><td>🏭 货源</td><td>1688 / 拼多多 / 义乌购</td><td>进货</td><td>—</td></tr>
+  <tr><td>📝 文案</td><td>ChatGPT + DeepL</td><td>写标题、描述、翻译</td><td>¥0-140</td></tr>
+  <tr><td>🎨 作图</td><td>Canva / Remove.bg</td><td>主图、A+、去背景</td><td>¥0-100</td></tr>
+  <tr><td>🖥️ ERP</td><td>智赢ERP / 店小秘</td><td>订单、刊登、采购、物流</td><td>¥0-100+</td></tr>
+  <tr><td>📦 物流</td><td>云途 / 燕文 / 货代</td><td>国际运输</td><td>按票计</td></tr>
+  <tr><td>💳 收款</td><td>Payoneer / 连连 / PingPong</td><td>收外币、提现</td><td>费率0.3-2%</td></tr>
+  <tr><td>🧮 记账</td><td>Excel / Google Sheets</td><td>算利润</td><td>免费</td></tr>
+  <tr><td>📱 沟通</td><td>微信 / WhatsApp</td><td>对接货代、供应商</td><td>免费</td></tr>
+</table>
+
+<h3>起步总预算</h3>
+<table class="tool-table">
+  <tr><th>项目</th><th>最低</th><th>舒服</th></tr>
+  <tr><td>网络 + 翻墙</td><td>¥10/月</td><td>¥50/月</td></tr>
+  <tr><td>电脑</td><td>现有电脑</td><td>¥3000-5000</td></tr>
+  <tr><td>打印机 + 打包</td><td>¥300</td><td>¥800</td></tr>
+  <tr><td>平台月租（亚马逊）</td><td>$39.99/月</td><td>$39.99/月</td></tr>
+  <tr><td>选品工具</td><td>免费版</td><td>¥368/月</td></tr>
+  <tr><td>ERP</td><td>免费版</td><td>¥50-200/月</td></tr>
+  <tr><td>样品 + 首批货</td><td>¥1000-3000</td><td>¥5000-10000</td></tr>
+  <tr><td style="font-weight:bold;color:var(--blue)">合计启动</td><td style="font-weight:bold;color:var(--blue)">≈ ¥3000</td><td style="font-weight:bold;color:var(--blue)">≈ ¥10000</td></tr>
+</table>
+</section>
+
+</div>
+
+<div class="footer">
+  个人跨境卖家全流程指南 · 持续更新 · 分享给需要的朋友<br>
+  整理｜Claude · 2026.06
+</div>
+
+</body>
+</html>
