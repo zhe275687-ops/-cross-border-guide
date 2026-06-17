@@ -15,9 +15,9 @@
 
   .hero {
     background: linear-gradient(135deg, #5b7cb5, #7ba0cc);
-    color:#fff; text-align:center; padding:32px 14px 24px;
+    color:#fff; text-align:center; padding:28px 14px 22px;
   }
-  .hero h1 { font-size:24px; }
+  .hero h1 { font-size:22px; }
   .hero p { opacity:.85; margin-top:4px; font-size:12px; }
 
   .nav {
@@ -25,16 +25,16 @@
     border-bottom:1px solid var(--border); display:flex; gap:2px; padding:4px 6px; overflow-x:auto;
   }
   .nav a {
-    color:var(--sub); text-decoration:none; font-size:11px; padding:7px 8px;
+    color:var(--sub); text-decoration:none; font-size:11px; padding:7px 7px;
     white-space:nowrap; border-bottom:2px solid transparent;
   }
   .nav a:hover { color:var(--blue); border-color:var(--blue); }
 
-  .container { max-width:860px; margin:0 auto; padding:0 12px; }
+  .container { max-width:800px; margin:0 auto; padding:0 12px; }
 
-  .sec { margin:12px 0; border-radius:8px; overflow:hidden; border:1px solid var(--border); background:var(--card); }
+  .sec { margin:10px 0; border-radius:8px; overflow:hidden; border:1px solid var(--border); background:var(--card); }
   .sec-header {
-    display:flex; align-items:center; gap:8px; padding:12px 14px;
+    display:flex; align-items:center; gap:8px; padding:11px 14px;
     cursor:pointer; user-select:none; font-size:16px; font-weight:600;
   }
   .sec-header:hover { background:var(--accent); }
@@ -43,36 +43,36 @@
   .sec-body { display:none; padding:0 14px 12px; font-size:13px; }
   .sec.open .sec-body { display:block; }
 
-  .grid2 { display:grid; grid-template-columns:repeat(auto-fill, minmax(200px, 1fr)); gap:7px; margin-bottom:8px; }
-  .grid3 { display:grid; grid-template-columns:repeat(auto-fill, minmax(180px, 1fr)); gap:7px; margin-bottom:8px; }
+  .grid2 { display:grid; grid-template-columns:repeat(auto-fill, minmax(200px, 1fr)); gap:6px; margin-bottom:8px; }
+  .grid3 { display:grid; grid-template-columns:repeat(auto-fill, minmax(170px, 1fr)); gap:6px; margin-bottom:8px; }
   .card { background:var(--bg); border:1px solid var(--border); border-radius:7px; padding:10px; }
-  .card h4 { font-size:13px; margin:2px 0 2px; }
+  .card h4 { font-size:13px; margin:2px 0; }
   .card p { font-size:12px; color:var(--sub); }
   .tag { display:inline-block; margin-top:4px; font-size:10px; padding:1px 6px; border-radius:3px; }
   .tag.g { background:#dce8d0; color:#4a6b3a; }
   .tag.b { background:#d4def0; color:#3a5a8c; }
   .tag.r { background:#f0d8d6; color:#8c3d3a; }
 
-  table { width:100%; border-collapse:collapse; font-size:12px; margin-bottom:8px; }
+  table { width:100%; border-collapse:collapse; font-size:12px; margin:8px 0; }
   th { text-align:left; padding:7px 5px; border-bottom:2px solid var(--border); color:var(--sub); font-size:10px; text-transform:uppercase; }
   td { padding:5px; border-bottom:1px solid var(--border); }
   tr:hover td { background:var(--accent); }
 
   .flow { display:flex; flex-wrap:wrap; gap:5px; justify-content:center; align-items:center; margin:8px 0; }
-  .flow .step { background:var(--accent); border-radius:5px; padding:7px 9px; text-align:center; min-width:65px; font-size:11px; }
+  .flow .step { background:var(--accent); border-radius:5px; padding:7px 9px; text-align:center; min-width:60px; font-size:11px; }
   .flow .step b { display:block; font-size:15px; color:var(--blue); }
   .flow .arrow { color:var(--sub); font-size:13px; }
 
-  .tip { background:var(--accent); border-radius:5px; padding:7px 10px; margin:7px 0; font-size:12px; }
-  .warn { border-left:3px solid var(--red); background:var(--accent); border-radius:0 5px 5px 0; padding:7px 10px; margin:7px 0; font-size:12px; }
+  .tip { background:var(--accent); border-radius:5px; padding:8px 10px; margin:8px 0; font-size:12px; }
+  .warn { border-left:3px solid var(--red); background:var(--accent); border-radius:0 5px 5px 0; padding:8px 10px; margin:8px 0; font-size:12px; }
 
-  h3 { font-size:14px; margin:14px 0 6px; color:var(--blue); }
-  .sub-title { font-size:12px; color:var(--sub); margin-bottom:10px; }
+  h3 { font-size:13px; margin:14px 0 6px; color:var(--blue); }
+  hr.sep { border:none; border-top:1px solid var(--border); margin:14px 0; }
 
   .footer { text-align:center; padding:14px; color:var(--sub); font-size:11px; }
 
   @media(max-width:500px) {
-    .hero h1 { font-size:20px; }
+    .hero h1 { font-size:19px; }
     .grid2,.grid3 { grid-template-columns:1fr 1fr; }
     .flow { flex-direction:column; }
     .flow .arrow { transform:rotate(90deg); }
@@ -90,116 +90,114 @@
 <nav class="nav">
   <a href="#" onclick="toggleAll(true)">展开</a>
   <a href="#" onclick="toggleAll(false)">收起</a>
-  <a href="#s0">平台</a><a href="#s1">基础设施</a><a href="#s2">收款与记账</a>
-  <a href="#s3">选品与货源</a><a href="#s4">上架与出单</a><a href="#s5">物流</a>
-  <a href="#s6">社媒与建联</a><a href="#s7">总览</a>
+  <a href="#s1">起步</a><a href="#s2">基建</a><a href="#s3">运营</a><a href="#s4">获客</a><a href="#s5">总览</a>
 </nav>
 
 <div class="container">
 
-<!-- ====== 1. 平台 ====== -->
-<div class="sec open" id="s0">
-  <div class="sec-header" onclick="toggle(this)">🛒 选平台 & 市场定位<span class="arr">▼</span></div>
+<!-- ====== 1. 平台 + 选品 + 货源 ====== -->
+<div class="sec open" id="s1">
+  <div class="sec-header" onclick="toggle(this)">🛒 平台、选品与货源<span class="arr">▼</span></div>
   <div class="sec-body">
-    <p class="sub-title">先做一个跑通再拓。推荐：亚马逊FBM → Ozon → TikTok。</p>
+
+    <h3>选平台</h3>
     <div class="grid3">
-      <div class="card"><h4>🇺🇸 亚马逊</h4><p>最大市场，FBM自发货起步</p><span class="tag r">需执照</span></div>
-      <div class="card"><h4>🇷🇺 Ozon</h4><p>俄罗斯No.1，个人可开</p><span class="tag g">个人可注册</span></div>
-      <div class="card"><h4>🌏 Shopee</h4><p>东南亚，低价走量</p><span class="tag g">门槛低</span></div>
-      <div class="card"><h4>🎵 TikTok Shop</h4><p>短视频带货红利</p><span class="tag b">需内容</span></div>
-      <div class="card"><h4>🇧🇷 美客多</h4><p>拉美最大市场</p></div>
-      <div class="card"><h4>🛍️ Temu</h4><p>半托管，量大利薄</p></div>
+      <div class="card"><h4>🇺🇸 亚马逊</h4><p>最大市场，FBM起步</p><span class="tag r">需执照</span></div>
+      <div class="card"><h4>🇷🇺 Ozon</h4><p>俄罗斯No.1</p><span class="tag g">个人可开</span></div>
+      <div class="card"><h4>🌏 Shopee</h4><p>东南亚低价走量</p></div>
+      <div class="card"><h4>🎵 TikTok Shop</h4><p>短视频红利</p><span class="tag b">需内容</span></div>
+      <div class="card"><h4>🇧🇷 美客多</h4><p>拉美最大</p></div>
+      <div class="card"><h4>🛍️ Temu</h4><p>半托管走量</p></div>
     </div>
-  </div>
-</div>
+    <div class="tip">💡 推荐路线：亚马逊FBM练手 → Ozon拓市场 → TikTok试内容</div>
 
-<!-- ====== 2. 基础设施（网络+硬件） ====== -->
-<div class="sec" id="s1">
-  <div class="sec-header" onclick="toggle(this)">🌐💻 网络与硬件<span class="arr">▼</span></div>
-  <div class="sec-body">
-    <h3>翻墙 & 防关联</h3>
+    <hr class="sep">
+
+    <h3>选品</h3>
     <div class="grid2">
-      <div class="card"><h4>⚡ 机场节点</h4><p>按月付费，全球切，新手首选</p><span class="tag g">¥10-50/月</span></div>
-      <div class="card"><h4>🖥️ 自建VPS</h4><p>独享IP最稳，搬瓦工/Vultr</p><span class="tag b">$5-20/月</span></div>
-    </div>
-    <div class="warn">⚠️ 多店铺必做环境隔离：指纹浏览器(AdsPower) / 远程VPS / 一机一号</div>
-
-    <h3>硬件</h3>
-    <table>
-      <tr><th>设备</th><th>建议</th><th>预算</th></tr>
-      <tr><td>电脑</td><td>i5 + 16GB，建议双屏</td><td>¥3000-5000</td></tr>
-      <tr><td>标签打印机</td><td>热敏，汉印/快麦</td><td>¥200-500</td></tr>
-      <tr><td>手机</td><td>主力沟通 + 注册专用</td><td>现有即可</td></tr>
-      <tr><td>电子秤</td><td>计重算运费必备</td><td>¥30-80</td></tr>
-    </table>
-  </div>
-</div>
-
-<!-- ====== 3. 收款+记账 ====== -->
-<div class="sec" id="s2">
-  <div class="sec-header" onclick="toggle(this)">💰🧮 收款与记账<span class="arr">▼</span></div>
-  <div class="sec-body">
-    <h3>跨境收款</h3>
-    <div class="grid3">
-      <div class="card"><h4>Payoneer</h4><p>亚马逊首选，1-2%</p></div>
-      <div class="card"><h4>PingPong</h4><p>到账快，1%封顶</p></div>
-      <div class="card"><h4>连连支付</h4><p>新手友好，0.7%起</p></div>
-    </div>
-    <div class="tip">💳 你需要：Visa/Mastercard卡 + 国内储蓄卡 + 收款平台账号</div>
-
-    <h3>利润计算</h3>
-    <div class="tip">💰 净利润 = 售价 − 佣金 − 进货 − 运费 − 广告 − 退货 − 手续费</div>
-    <div class="grid2">
-      <div class="card"><h4>起步 <50单</h4><p>Google Sheets/Excel</p></div>
-      <div class="card"><h4>成长 50-300单</h4><p>ERP财务管理模块</p></div>
-    </div>
-    <div class="warn">💸 新手最容易忘算：退货损耗、广告费、汇率波动</div>
-  </div>
-</div>
-
-<!-- ====== 4. 选品+货源 ====== -->
-<div class="sec" id="s3">
-  <div class="sec-header" onclick="toggle(this)">🔍🏭 选品与货源<span class="arr">▼</span></div>
-  <div class="sec-body">
-    <h3>选品标准 & 工具</h3>
-    <div class="grid2">
-      <div class="card"><h4>📐 新手标准</h4><p>$15-50 · <1kg · 毛利>30% · 头部评论<500</p></div>
+      <div class="card"><h4>📐 新手标准</h4><p>$15-50 · <1kg · 毛利>30% · 评论<500</p></div>
       <div class="card"><h4>🎯 思路</h4><p>利基小众 · 差评改良 · 套装打包 · 季节款</p></div>
     </div>
     <table>
       <tr><th>工具</th><th>用途</th><th>月费</th></tr>
       <tr><td>卖家精灵</td><td>关键词+竞品销量</td><td>¥368</td></tr>
-      <tr><td>Helium 10</td><td>选品+关键词反查</td><td>$29起</td></tr>
+      <tr><td>Helium 10</td><td>选品+反查</td><td>$29起</td></tr>
       <tr><td>Keepa</td><td>历史价格曲线</td><td>免费</td></tr>
     </table>
     <div class="warn">🚫 不碰：侵权大牌 · FDA/CE认证 · 易碎品</div>
 
-    <h3>货源渠道</h3>
+    <hr class="sep">
+
+    <h3>货源</h3>
     <table>
       <tr><th>渠道</th><th>适合</th></tr>
       <tr><td>1688.com</td><td>全品类第一站</td></tr>
       <tr><td>拼多多</td><td>小百货更便宜</td></tr>
-      <tr><td>义乌购</td><td>饰品日用品天堂</td></tr>
+      <tr><td>义乌购</td><td>饰品日用品</td></tr>
       <tr><td>线下跑厂</td><td>义乌/广州/华强北</td></tr>
     </table>
-    <div class="tip">💡 先买样品比质量 → 小批试卖 → 稳定后谈批量价。和2-3家供应商保持关系。</div>
+    <div class="tip">💡 先买样品比质量 → 小批试卖 → 稳定后谈批量价</div>
   </div>
 </div>
 
-<!-- ====== 5. 上架+出单 ====== -->
-<div class="sec" id="s4">
-  <div class="sec-header" onclick="toggle(this)">📝📦 上架与出单发货<span class="arr">▼</span></div>
+<!-- ====== 2. 基础设施：网络+硬件+收款+记账 ====== -->
+<div class="sec" id="s2">
+  <div class="sec-header" onclick="toggle(this)">🌐💻💰 网络、硬件、收款与记账<span class="arr">▼</span></div>
   <div class="sec-body">
+
+    <h3>翻墙 & 防关联</h3>
+    <div class="grid2">
+      <div class="card"><h4>⚡ 机场节点</h4><p>按月付费，新手首选</p><span class="tag g">¥10-50/月</span></div>
+      <div class="card"><h4>🖥️ 自建VPS</h4><p>独享IP最稳</p><span class="tag b">$5-20/月</span></div>
+    </div>
+    <div class="warn">⚠️ 多店铺必做隔离：指纹浏览器AdsPower / 远程VPS / 一机一号</div>
+
+    <h3>硬件</h3>
+    <table>
+      <tr><th>设备</th><th>建议</th><th>预算</th></tr>
+      <tr><td>电脑</td><td>i5+16GB，建议双屏</td><td>¥3000-5000</td></tr>
+      <tr><td>打印机</td><td>热敏，汉印/快麦</td><td>¥200-500</td></tr>
+      <tr><td>手机×2</td><td>主力+注册专用</td><td>现有</td></tr>
+      <tr><td>电子秤</td><td>计重算运费</td><td>¥30-80</td></tr>
+    </table>
+
+    <hr class="sep">
+
+    <h3>收款</h3>
+    <table>
+      <tr><th>平台</th><th>特点</th><th>费率</th></tr>
+      <tr><td>Payoneer</td><td>亚马逊首选</td><td>1-2%</td></tr>
+      <tr><td>PingPong</td><td>到账快</td><td>1%封顶</td></tr>
+      <tr><td>连连支付</td><td>新手友好</td><td>0.7%起</td></tr>
+    </table>
+    <div class="tip">💳 需要：Visa/Mastercard + 国内储蓄卡 + 收款平台账号</div>
+
+    <h3>记账</h3>
+    <div class="tip">💰 净利润 = 售价 − 佣金 − 进货 − 运费 − 广告 − 退货 − 手续费</div>
+    <div class="grid2">
+      <div class="card"><h4>起步 <50单</h4><p>Google Sheets/Excel</p></div>
+      <div class="card"><h4>成长 50-300单</h4><p>ERP财务管理模块</p></div>
+    </div>
+    <div class="warn">💸 忘记算退货损耗和广告费，看着出单多实际亏</div>
+  </div>
+</div>
+
+<!-- ====== 3. 运营：上架+出单+物流 ====== -->
+<div class="sec" id="s3">
+  <div class="sec-header" onclick="toggle(this)">📝📦🚚 上架、出单与物流<span class="arr">▼</span></div>
+  <div class="sec-body">
+
     <h3>上架工具</h3>
     <div class="grid2">
-      <div class="card"><h4>🤖 ChatGPT</h4><p>标题+五点+描述</p><span class="tag g">免费</span></div>
-      <div class="card"><h4>🌍 DeepL</h4><p>高质量翻译</p><span class="tag g">免费</span></div>
-      <div class="card"><h4>🎨 Canva</h4><p>做图+A+内容</p><span class="tag g">免费</span></div>
+      <div class="card"><h4>🤖 ChatGPT</h4><p>标题+描述+邮件</p><span class="tag g">免费</span></div>
+      <div class="card"><h4>🌍 DeepL</h4><p>翻译</p><span class="tag g">免费</span></div>
+      <div class="card"><h4>🎨 Canva</h4><p>做图+A+</p><span class="tag g">免费</span></div>
       <div class="card"><h4>🖥️ 智赢ERP</h4><p>批量刊登多平台</p></div>
     </div>
-    <div class="tip">💡 做好一个产品模板 → 智赢ERP一键同步到亚马逊、Ozon、美客多，不用每个平台重做</div>
 
-    <h3>出单发货流程（FBM自发货）</h3>
+    <hr class="sep">
+
+    <h3>出单发货流程（FBM）</h3>
     <div class="flow">
       <div class="step"><b>1</b>平台出单</div><span class="arrow">→</span>
       <div class="step"><b>2</b>ERP拉单</div><span class="arrow">→</span>
@@ -211,39 +209,37 @@
     <table>
       <tr><th>环节</th><th>工具</th></tr>
       <tr><td>拉单</td><td>智赢ERP / 店小秘</td></tr>
-      <tr><td>采购</td><td>ERP下单器 → 1688</td></tr>
+      <tr><td>采购</td><td>ERP下单器→1688</td></tr>
       <tr><td>跟踪</td><td>17TRACK / 快递100</td></tr>
     </table>
-  </div>
-</div>
 
-<!-- ====== 6. 物流 ====== -->
-<div class="sec" id="s5">
-  <div class="sec-header" onclick="toggle(this)">🚚 物流方式<span class="arr">▼</span></div>
-  <div class="sec-body">
+    <hr class="sep">
+
+    <h3>物流方式</h3>
     <table>
       <tr><th>方式</th><th>时效</th><th>费用</th><th>适合</th></tr>
       <tr><td>专线（云途/燕文）</td><td>7-15天</td><td>中</td><td>👍 最常用</td></tr>
-      <tr><td>国际快递 DHL/UPS</td><td>3-7天</td><td>高</td><td>急单</td></tr>
-      <tr><td>邮政小包 EUB</td><td>15-30天</td><td>低</td><td>轻小件</td></tr>
-      <tr><td>海外仓 FBA/第三方</td><td>1-3天</td><td>仓储费</td><td>爆品</td></tr>
+      <tr><td>DHL/UPS</td><td>3-7天</td><td>高</td><td>急单</td></tr>
+      <tr><td>邮政小包</td><td>15-30天</td><td>低</td><td>轻小件</td></tr>
+      <tr><td>海外仓</td><td>1-3天</td><td>仓储费</td><td>爆品</td></tr>
     </table>
-    <div class="tip">💡 加5-10个货代微信比价，先试一票。问清：计费方式、时效、丢件赔付、能否走带电品</div>
+    <div class="tip">💡 加5-10个货代微信比价，先试一票。问清计费方式、时效、丢件赔不赔</div>
   </div>
 </div>
 
-<!-- ====== 7. 社媒+建联+售后 ====== -->
-<div class="sec" id="s6">
+<!-- ====== 4. 获客：社媒+建联+售后 ====== -->
+<div class="sec" id="s4">
   <div class="sec-header" onclick="toggle(this)">📱💬 社媒推广、客户建联与售后<span class="arr">▼</span></div>
   <div class="sec-body">
+
     <h3>社媒推广</h3>
     <div class="grid3">
-      <div class="card"><h4>💼 LinkedIn</h4><p>B2B首选，加采购经理</p><span class="tag b">B2B核心</span></div>
-      <div class="card"><h4>📘 Facebook</h4><p>行业群组攒信任</p><span class="tag g">免费流量</span></div>
-      <div class="card"><h4>📷 Instagram</h4><p>产品视觉，Reels扩粉</p></div>
-      <div class="card"><h4>🎵 TikTok</h4><p>流量最大，短视频爆单</p><span class="tag r">流量爆发</span></div>
-      <div class="card"><h4>🎥 YouTube</h4><p>长尾搜索，持续几年</p></div>
-      <div class="card"><h4>📌 Pinterest</h4><p>女性品类流量好</p></div>
+      <div class="card"><h4>💼 LinkedIn</h4><p>B2B加采购经理</p><span class="tag b">B2B核心</span></div>
+      <div class="card"><h4>📘 Facebook</h4><p>行业群组攒信任</p></div>
+      <div class="card"><h4>📷 Instagram</h4><p>产品视觉展示</p></div>
+      <div class="card"><h4>🎵 TikTok</h4><p>短视频爆单</p><span class="tag r">流量爆发</span></div>
+      <div class="card"><h4>🎥 YouTube</h4><p>长尾搜索流量</p></div>
+      <div class="card"><h4>📌 Pinterest</h4><p>女性品类好</p></div>
     </div>
     <table>
       <tr><th>平台</th><th>每天做</th><th>频率</th></tr>
@@ -251,11 +247,13 @@
       <tr><td>Ins / TikTok</td><td>发1条15-30秒短视频</td><td>每天</td></tr>
       <tr><td>YouTube</td><td>发1条长视频</td><td>每周</td></tr>
     </table>
-    <div class="tip">💡 一条视频发Ins Reels + YouTube Shorts + TikTok，一鱼三吃</div>
+    <div class="tip">💡 一条视频发TikTok+Ins Reels+YouTube Shorts，一鱼三吃</div>
 
-    <h3>客户沟通 & 建联</h3>
+    <hr class="sep">
+
+    <h3>客户建联</h3>
     <table>
-      <tr><th>App</th><th>覆盖地区</th></tr>
+      <tr><th>工具</th><th>覆盖</th></tr>
       <tr><td>WhatsApp</td><td>👍 欧美/拉美/中东，全球最通用</td></tr>
       <tr><td>微信</td><td>对接供应商、货代</td></tr>
       <tr><td>Telegram</td><td>俄罗斯/东欧（Ozon客户）</td></tr>
@@ -269,28 +267,31 @@
       <div class="step"><b>5</b>长期维护</div>
     </div>
     <div class="grid2">
-      <div class="card"><h4>🔍 找客户</h4><p>LinkedIn搜采购经理 · FB群组 · 海关数据 · Google搜"product+distributor"</p></div>
-      <div class="card"><h4>👋 接触</h4><p>别上来就推销！先自我介绍，WhatsApp第一句话定生死</p></div>
-      <div class="card"><h4>🤝 建信任</h4><p>产品PDF+工厂照片+样品可寄+已有案例</p></div>
-      <div class="card"><h4>💰 成交 & 维护</h4><p>说清FOB还是DDP · T/T 30/70 · 每2-3月问候一次 · 节假日祝福 · 新品主动推</p></div>
+      <div class="card"><h4>🔍 找客户</h4><p>LinkedIn搜采购经理 · FB群组 · 海关数据 · Google搜</p></div>
+      <div class="card"><h4>👋 接触</h4><p>别一上来就推销，先自我介绍</p></div>
+      <div class="card"><h4>🤝 建信任</h4><p>发产品PDF+工厂照片+样品+案例</p></div>
+      <div class="card"><h4>💰 成交维护</h4><p>T/T 30/70 · 每2-3月问候 · 节假日祝福 · 新品推送</p></div>
     </div>
-    <div class="tip">💡 用飞书表格/Notion记客户跟进：谁、哪天聊了啥、下次哪天联系。客户是公司的，不是个人的。</div>
+    <div class="tip">💡 用飞书表格记客户跟进：谁、聊了啥、下次哪天联系</div>
+
+    <hr class="sep">
 
     <h3>售后</h3>
     <table>
       <tr><th>场景</th><th>做法</th></tr>
       <tr><td>问物流</td><td>发单号，解释7-15天</td></tr>
-      <tr><td>货坏了/发错</td><td>直接退/重发，差评比货贵</td></tr>
-      <tr><td>差评</td><td>真诚道歉+补偿，别直接要求改评（违规）</td></tr>
-      <tr><td>退货</td><td>低值退钱不要货，高值走海外仓</td></tr>
+      <tr><td>货坏了</td><td>直接退/重发，差评比货贵</td></tr>
+      <tr><td>差评</td><td>真诚道歉+补偿，别要求改评</td></tr>
+      <tr><td>退货</td><td>低值退钱，高值走海外仓</td></tr>
     </table>
   </div>
 </div>
 
-<!-- ====== 8. 总览 ====== -->
-<div class="sec" id="s7">
+<!-- ====== 5. 总览 ====== -->
+<div class="sec" id="s5">
   <div class="sec-header" onclick="toggle(this)">⚡ 全流程总览 & 工具清单<span class="arr">▼</span></div>
   <div class="sec-body">
+
     <h3>每日工作流</h3>
     <div class="flow">
       <div class="step"><b>☀️</b>处理订单</div><span class="arrow">→</span>
@@ -301,12 +302,12 @@
       <div class="step"><b>🧮</b>记账</div>
     </div>
 
-    <h3>完整工具清单</h3>
+    <h3>全套工具清单</h3>
     <table>
       <tr><th>环节</th><th>工具</th><th>月费</th></tr>
       <tr><td>🌐 翻墙</td><td>机场/自建VPS</td><td>¥10-50</td></tr>
       <tr><td>🔐 防关联</td><td>AdsPower</td><td>免费-¥99</td></tr>
-      <tr><td>🔍 选品</td><td>卖家精灵/H10</td><td>¥0-368</td></tr>
+      <tr><td>🔍 选品</td><td>卖家精灵/H10/Keepa</td><td>¥0-368</td></tr>
       <tr><td>📝 文案</td><td>ChatGPT+DeepL</td><td>¥0-140</td></tr>
       <tr><td>🎨 作图</td><td>Canva+Remove.bg</td><td>免费</td></tr>
       <tr><td>🖥️ ERP</td><td>智赢/店小秘</td><td>¥0-200</td></tr>
